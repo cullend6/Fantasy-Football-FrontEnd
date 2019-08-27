@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import TeamSelector from './components/TeamSelector'
+import Login from './components/Login'
+import Header from './components/Header'
+import Footer from './components/Footer'
 
 function App() {
+
+  const [user, setUser] = useState()
+
+  const displayBody = () => {
+    if(!user) {
+      return (
+        <div className='login-box'>
+          <Login setUser={setUser} />
+        </div>
+      )
+    }
+    return <TeamSelector user={user} />
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <Header />
+      {displayBody()}
+      <Footer />
     </div>
-  );
+  )
 }
 
 export default App;
