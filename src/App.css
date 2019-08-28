@@ -98,8 +98,8 @@
   transition: .3s;
 }
 
-.login {
-  border: 2px solid blue;
+.main {
+  height: 80vh;
 }
 
 .login-box {
@@ -107,7 +107,6 @@
   width: 30%;
   margin-left: 35%;
   border-radius: 5px;
-  border: 2px solid red;
 }
 
 .player {

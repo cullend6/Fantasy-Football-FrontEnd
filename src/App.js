@@ -23,7 +23,9 @@ function App() {
   return (
     <div className='App'>
       <Header />
-      {displayBody()}
+      <div className='main'>
+        {displayBody()}
+      </div>
       <Footer />
     </div>
   )

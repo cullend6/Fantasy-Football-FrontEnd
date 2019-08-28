@@ -34,17 +34,17 @@ export default function Login(props) {
         <div>
             <form onSubmit={handleSubmit}>
                 <div>
-                    <input type='text' value={email} onChange={handleEmailChange} placeholder='Email'></input>
+                    <input className='email-box' type='text' value={email} onChange={handleEmailChange} placeholder='Email'></input>
                 </div>
                 <div>
-                    <input type='password' value={password} onChange={handlePasswordChange} placeholder='Password'></input>
+                    <input className='password-box' type='password' value={password} onChange={handlePasswordChange} placeholder='Password'></input>
                 </div>
                 <div>
-                <input type='password' value={passwordCheck} onChange={handlePasswordCheckChange} placeholder='Confirm Password'></input>
+                <input className='password-box' type='password' value={passwordCheck} onChange={handlePasswordCheckChange} placeholder='Confirm Password'></input>
                 </div>
-                <input type='submit' value='Create User'/>
+                <input className='button' type='submit' value='Create User'/>
             </form>
-            <button onClick={props.goBack}>Back</button>
+            <button className='button' onClick={props.goBack}>Back</button>
             <div>
                 {errorMessage}
             </div>
